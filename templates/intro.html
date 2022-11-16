@@ -1,13 +1,13 @@
 <html lang="ko">
 <head>
     <title>너만 타냐?</title>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    
+
     <!--  bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,96 +15,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-    
+
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    
+
     <!--  추가 css  -->
     <link rel="stylesheet" href="../static/css/intro.css">
     <link rel="stylesheet" href="../static/css/common.css">
     <link href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap" rel="stylesheet">
-    
-    <script>
-        // ['쿠키'라는 개념에 대해 알아봅시다]
-        // 로그인을 구현하면, 반드시 쿠키라는 개념을 사용합니다.
-        // 페이지에 관계없이 브라우저에 임시로 저장되는 정보입니다. 키:밸류 형태(딕셔너리 형태)로 저장됩니다.
-        // 쿠키가 있기 때문에, 한번 로그인하면 네이버에서 다시 로그인할 필요가 없는 것입니다.
-        // 브라우저를 닫으면 자동 삭제되게 하거나, 일정 시간이 지나면 삭제되게 할 수 있습니다.
-        function login() {
-            $.ajax({
-                type: "POST",
-                url: "/api/login",
-                data: {id_give: $('#userid').val(), pw_give: $('#userpw').val()},
-                success: function (response) {
-                    if (response['result'] == 'success') {
-                        // 로그인이 정상적으로 되면, 토큰을 받아옵니다.
-                        // 이 토큰을 mytoken이라는 키 값으로 쿠키에 저장합니다.
-                        $.cookie('mytoken', response['token']);
-                        
-                        alert('로그인 완료!')
-                        window.location.href = '/'
-                    } else {
-                        // 로그인이 안되면 에러메시지를 띄웁니다.
-                        alert(response['msg'])
-                    }
-                }
-            })
-        }
-        
-        // 간단한 회원가입 함수입니다.
-        // 아이디, 비밀번호, 닉네임을 받아 DB에 저장합니다.
-        function register() {
-            $.ajax({
-                type: "POST",
-                url: "/api/register",
-                data: {
-                    id_give: $('#signup_username').val(),
-                    pw_give: $('#signup_userid').val(),
-                    name_give: $('#signup_userpw').val()
-                },
-                success: function (response) {
-                    if (response['result'] == 'success') {
-                        alert('회원가입이 완료되었습니다.')
-                        window.location.href = '/'
-                    } else {
-                        alert(response['msg'])
-                    }
-                }
-            })
-        }
-        
-        
-        $(function () {
-            $("#login_btn").click(function () {
-                $(".login_modal").modal("show");
-                $(".login_modal").css("padding-right", 0);
-                $("body").css("padding-right", 0)
-            });
-            
-            $("#login_modal_close").click(function () {
-                $(".login_modal").modal("hide");
-            });
-            
-            $("#login_close_btn").click(function () {
-                $(".login_modal").modal("hide");
-            });
-            
-            $("#sign_up_btn").click(function () {
-                $(".sign_up_modal").modal("show");
-                $(".sign_up_modal").css("padding-right", 0);
-                $("body").css("padding-right", 0)
-            });
-            
-            $("#sign_up_modal_close").click(function () {
-                $(".sign_up_modal").modal("hide");
-            });
-            
-            $("#sign_up_close_btn").click(function () {
-                $(".sign_up_modal").modal("hide");
-            });
-            
-        });
-    </script>
+
+    <script src="../static/js/intro.js"></script>
 
 </head>
 
@@ -123,8 +43,8 @@
                         data-target="#loginModalCenter">
                     로그인
                 </button>
-            
-            
+
+
             </div>
             <div class="sign_btn_box">
                 <button type="button" id="sign_up_btn" class="btn btn-light" data-toggle="modal"
@@ -133,8 +53,8 @@
                 </button>
             </div>
         </div>
-    
-    
+
+
     </div>
 
 </div>
@@ -223,6 +143,10 @@
                                        placeholder="ID">
                             </div>
                         </div>
+                        <div class="id_check_btn_box">
+                            <button type="button" id="id_check_btn" class="btn btn-primary" onclick="idCheck()">ID CHECK</button>
+{#                            <button>ID CHECK</button>#}
+                        </div>
                     </div>
                 </div>
                 <div class="field is-horizontal">
@@ -237,7 +161,19 @@
                         </div>
                     </div>
                 </div>
-            
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="signup_userpw_check">PW CHECK</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input type="password" class="input" id="signup_userpw_check" placeholder="PASSWORD CHECK">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" id="submit_btn" class="btn btn-success" onclick="register()">Join</button>
