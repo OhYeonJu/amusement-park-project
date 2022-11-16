@@ -1,3 +1,5 @@
+.nav > .depth > li > a:hover{ color:black}
+
 .inner {
     max-width: 1440px;
     width: 100%;
@@ -149,21 +151,23 @@ header .nav > div > p {
     display: inline-block;
     font-size: 30px;
     margin: 50px;
-    background-color: #dbdbdb;
-    color: black;
+    background-color: #ABC1A7;
+    color: white;
     border-radius: 30px;
     border: 3px solid black;
 }
 
 .mainpage_recommand_button > button:hover {
     border: 5px solid black;
+    cursor: pointer;
+    color: black;
 }
 
 .recommand_slot1 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://adventure.lotteworld.com/image/2018/6/20180608062908467_1350.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -173,7 +177,7 @@ header .nav > div > p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://adventure.lotteworld.com/image/2020/6/202006010126067402_1350.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -183,7 +187,7 @@ header .nav > div > p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://adventure.lotteworld.com/image/2018/6/20180619103213086_1350.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -193,7 +197,7 @@ header .nav > div > p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://seoulland.co.kr/_File/facility/attraction//listImgFile_1621838455_0.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -203,7 +207,7 @@ header .nav > div > p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://seoulland.co.kr/_File/facility/attraction//listImgFile_1621846580_0.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -213,7 +217,7 @@ header .nav > div > p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
+    background-image: url("https://seoulland.co.kr/_File/facility/attraction//listImgFile_1622186468_0.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -235,7 +239,7 @@ header .nav > div > p {
 
 .recommand_slot1:hover .amusement_name_tooltip {
     /*visibility: visible;*/
-    opacity: 0.7;
+    opacity: 0.8;
     transition: all 1s;
     scale: 1.2;
 }
@@ -293,35 +297,18 @@ header .nav > div > p {
 
 .review__slot-1 {
     width: 100%;
-    height: 50%;
+    height: 100%;
     /*background-color: aquamarine;*/
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.review__slot-2 {
-    width: 100%;
-    height: 50%;
-    /*background-color: aquamarine;*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .review__slot-1 > section {
-    width: 45%;
-    height: 90%;
-    background-color: #6f6f6f;
-    position: relative;
-    display: flex;
-    border: 3px solid black;
-}
-
-.review__slot-2 > section {
-    width: 45%;
-    height: 90%;
-    background-color: #6f6f6f;
+    width: 600px;
+    height: 300px;
+    background-color: #ABC1A7;
     position: relative;
     display: flex;
     border: 3px solid black;
@@ -330,12 +317,14 @@ header .nav > div > p {
 .review_slot1_img {
     width: 30%;
     height: 100%;
-    background-color: #c9dbc8;
+    overflow: hidden;
     border-right: 3px solid black;
+}
 
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
-    background-size: cover;
-    background-position: center;
+.review_slot1_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .review_slot1_txt {
@@ -345,64 +334,6 @@ header .nav > div > p {
     display: flex;
     flex-direction: column;
 }
-
-.review_slot2_img {
-    width: 30%;
-    height: 100%;
-    background-color: #c9dbc8;
-    border-right: 3px solid black;
-
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.review_slot2_txt {
-    width: 70%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.review_slot3_img {
-    width: 30%;
-    height: 100%;
-    background-color: #c9dbc8;
-    border-right: 3px solid black;
-
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.review_slot3_txt {
-    width: 70%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.review_slot4_img {
-    width: 30%;
-    height: 100%;
-    background-color: #c9dbc8;
-    border-right: 3px solid black;
-
-    background-image: url("https://i.ibb.co/DgDQb7k/Kakao-Talk-20221114-163721172.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.review_slot4_txt {
-    width: 70%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
 
 .review_location {
     width: 95%;
@@ -427,8 +358,16 @@ header .nav > div > p {
 }
 
 .review_name_title {
-    width: 70%;
+    width: 80%;
     height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    color: black;
+    font-size: 35px;
+    line-height: 60px;
+
+
     /*background-color: beige;*/
 }
 
@@ -439,19 +378,22 @@ header .nav > div > p {
 }
 
 .review_name_like {
-    width: 30%;
+    width: 20%;
     height: 100%;
 }
 
 .review_name_like > span {
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 60px;
 }
 
 .review_content {
     width: 95%;
     height: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
     margin-left: 5%;
     /*background-color: #dbdbdb;*/
 }
@@ -464,6 +406,8 @@ header .nav > div > p {
 .review_date {
     width: 95%;
     height: 15%;
+    text-overflow: ellipsis;
+    overflow: hidden;
     margin-left: 5%;
     /*background-color: #ABC1A7;*/
 }
@@ -485,12 +429,27 @@ header .nav > div > p {
     display: inline-block;
     font-size: 30px;
     margin: 50px;
-    background-color: white;
-    color: #aac0a7;
+    background-color: #ABC1A7;
+    color: white;
     border-radius: 30px;
     border: 3px solid black;
 }
 
 .mainpage_review_button > button:hover {
     border: 5px solid black;
+    cursor: pointer;
+    color: black;
+}
+
+.up_btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0.7;
+}
+
+.up_btn:hover {
+    opacity: 1;
 }

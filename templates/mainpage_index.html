@@ -50,90 +50,36 @@
         <span>놀이기구 추천</span>
         <div class="recommand__slot">
             <section class="recommand_slot1">
-                <div class="amusement_name_tooltip">놀이기구 이름1</div>
+                <div class="amusement_name_tooltip">아틀란티스</div>
             </section>
             <section class="recommand_slot2">
-                <div class="amusement_name_tooltip">놀이기구 이름2</div>
+                <div class="amusement_name_tooltip">자이로드롭</div>
             </section>
             <section class="recommand_slot3">
-                <div class="amusement_name_tooltip">놀이기구 이름3</div>
+                <div class="amusement_name_tooltip">후렌치레볼루션</div>
             </section>
             <section class="recommand_slot4">
-                <div class="amusement_name_tooltip">놀이기구 이름4</div>
+                <div class="amusement_name_tooltip">스카이엑스</div>
             </section>
             <section class="recommand_slot5">
-                <div class="amusement_name_tooltip">놀이기구 이름5</div>
+                <div class="amusement_name_tooltip">킹바이킹</div>
             </section>
             <section class="recommand_slot6">
-                <div class="amusement_name_tooltip">놀이기구 이름6</div>
+                <div class="amusement_name_tooltip">블랙홀 2000</div>
             </section>
         </div>
         <div class="mainpage_recommand_button">
-            <button>놀이기구 전체 보기</button>
+            <button onclick="location.href='/introduction'">놀이기구 전체 보기</button>
         </div>
     </div>
     <div class="mainpage_review">
         <span>놀이기구 후기</span>
-        <div class="review__slot-1">
-            <section>
-                <div class="review_slot1_img"></div>
-                <div class="review_slot1_txt">
-                    <div class="review_location"><span>에버랜드</span></div>
-                    <div class="review_name">
-                        <div class="review_name_title"><span>후기제목</span></div>
-                        <div class="review_name_like"><span>좋아요1</span></div>
-                    </div>
-                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
-                    </div>
-                    <div class="review_date"><span>작성일자</span></div>
-                </div>
-            </section>
-            <section>
-                <div class="review_slot2_img"></div>
-                <div class="review_slot2_txt">
-                    <div class="review_location"><span>에버랜드</span></div>
-                    <div class="review_name">
-                        <div class="review_name_title"><span>후기제목</span></div>
-                        <div class="review_name_like"><span>좋아요1</span></div>
-                    </div>
-                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
-                    </div>
-                    <div class="review_date"><span>작성일자</span></div>
-                </div>
-            </section>
-        </div>
-        <div class="review__slot-2">
-            <section>
-                <div class="review_slot3_img"></div>
-                <div class="review_slot3_txt">
-                    <div class="review_location"><span>에버랜드</span></div>
-                    <div class="review_name">
-                        <div class="review_name_title"><span>후기제목</span></div>
-                        <div class="review_name_like"><span>좋아요1</span></div>
-                    </div>
-                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
-                    </div>
-                    <div class="review_date"><span>작성일자</span></div>
-                </div>
-            </section>
-            <section>
-                <div class="review_slot4_img"></div>
-                <div class="review_slot4_txt">
-                    <div class="review_location"><span>에버랜드</span></div>
-                    <div class="review_name">
-                        <div class="review_name_title"><span>후기제목</span></div>
-                        <div class="review_name_like"><span>좋아요1</span></div>
-                    </div>
-                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
-                    </div>
-                    <div class="review_date"><span>작성일자</span></div>
-                </div>
-            </section>
-        </div>
+        <div class="review__slot-1" id="mainpage_reviewpost"></div>
         <div class="mainpage_review_button">
-            <button>후기 전체보기</button>
+            <button onclick="location.href='/post'">후기 전체보기</button>
         </div>
     </div>
 </section>
+<div class="up_btn"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX///8AAADHx8fj4+PT09O0tLTBwcHd3d37+/u8vLz19fXo6Ojy8vLU1NT4+Pju7u5gYGCRkZFwcHBXV1erq6t2dnYYGBhnZ2cRERFKSkp9fX2ZmZm2trZbW1s8PDw0NDSioqItLS2IiIgjIyNPT09ERESMjIw7OzswMDAdHR0TExMmJiZQsPGCAAAO9klEQVR4nO1d6WKqOhBWUHFfsahUxa3W4/u/321mQNkSsgzLObffv1pN8pFk9oRW6xe/+MW/j5HVdRfL1eH50UZsLserdw7cntOve2xm6I8n7tcqosXBbef3ZtO6h6qBmROsD2JuMTzmX9ao7iGroOOvHtLs3rO57s3qHrkMpgNvkx77fe0HXWtij6eI4cixBm5wvv7JsAycugmIMXa38fFujmu3YPWNO59f1+SELxpLcvw5j8/GsjuRFiC2lZBIx4Vd5kA1Mdm9F+dxN1Af4qyzWL1Jrj6HJQzSAN3ba2xb39bWcuPP5audj3NzpOt48V6b7ti0NWv9am0/oRieMUa71+L0iZ76YP9aEBZNiwawX/yWHcJmR/4x4tgjbFYds4jfw6dW1v3evgHzGO2/S7eU5h0vEqw1KY/PSLqUt45GkdRZGwswdUxC6+VQ7j55cXRL7SaL6Rn7PX2W3lW0VreVqg7rib0GlXiwk9ANO1fRGSI0PJaVGVbdUGJXZJN30Oc5UOq/IkxDtbSoorNQRfhV9BVDB02AbemKY3ZFDVG9D9f/wkdbsmyz6plAxAT9s12ZffiVbvgsUMQdSgvnTFEzLWsMcqJQ3ZQk5GaoloJyWpeEcy9vMzq4C+p2SvteWZIAZcyhAdETvxx5gxtgSd2sFgYwlj1to0F1FoUEJhB5vFJKPCRYjp+rg9kF7Bu6hA6u/HoDJkkMwYa7UVFEglUa2hIA6/FIs1CDJhJstSBAfqdoqdtMgiHFlXk7vUbo+VzAQvVMW5k0dQYZtgSxDRsIUoZknROdZzC9GRvKwxO1mWtv2he6nNIYxjcwaOFK7UyMWIznSReJGMEa0/dXISi6JhvOzzPHEAGBAIzQYe1ddP2BLvFoWrOoMoGwUTDDr3q/ddhvvwndpVmUMdMeUh4W2j7B9G62xDMYY4wAk/WEjsFcV9yvicVoHwm62HB7S0ZxCr6U+lobUDvSt5Bgq4XxazLHALeT8taegelONYafGcRIcgB/YGz3SLbFXR2lBilmOr3Vx2KiKH6EmYEjWdrTUxcZbrSiiIAE3xIPXc4jlQE3Y1txq/QL1v+cqPtWRPAr9glSJLNRe6rrlI1oQ5c6xxBn0glAv/oPlY0KAlr+ecEToYs7oXpIy2XYCO0NEcW+mjylNaxQOWTNWwweUKV5YFZkvQyQdGQuDtY05MWSsVzlg4gi21knOTNiFJfrxkDdlx9rwOA1kWWoMGwmF75JOm1FMpMnljEIRBQF8mWXHnhcVNFflJh8TyLMKZPEgfqn3O2exYpQzLiFRnZIkSQS9Clnh1l0yyaUlgehid0hpHiUslNuXLmgDJSV9wL5hvFKkn3RkZFbFp2mQEl5KvQgwhILk4hZhJXEJN44uksdKCefErafg7NI4G1PiiexI7dZJYAi5CFlKmLcmcJO3BdOUPE3JIEC5ENyvdt4nMTcXSucIYfKxEDxIe85jE7wg8C4YxZKEGUymJFMUQEQykeF5U5FkYm3P3zhNt7QaKaw9EZpMYwhNW9uD1+Eq92lsUhHWqYYZlmM6z2YncjPDB9IdrsewVZrigFVw3xgX2STgZwxjl2MHrpmGKYDTSkuBfb3jkJVhMkJLSOsjxTN4tCgMDiWIoUFPD4amWB4iMMsoffN7Z9ZIRujtn8W2rehAYZ5GyPT3+eqPM9ckmG+ysj8wtCqSazW5jkP042xPTPdEhhfnjHFK2cVsUV6MGj3R1CsSOwSpGhgWgWcdb42FtQrGqskrFfXTxMzrZcTse8fBZpSClciglEMWb9m7ZCrFBjxk0nS0iMxuhAYRb7pJhgXuUrVN1T3Swp75IWQoqaBxZT+KfPp3EBPt3jZF31gDvWgSTFPXwzZh/rhC172RR8YLJcJ8+Rgn6Oz2MTqO0787Is+kOJFK4fq5ozGN1ljC2MlnQfMCJx0FhZ4SanPTLahb6i/eECKWnV+7Iez7EeagWAciFKdgCT008T7zISNcqZVEuURfJ3/VZ9FP6OaB9qWIA6CrsApifBWA2Vbq5fZNr6uvYVDOJZ2HVmYJlYN+rBymUvik5WmoMEBPEs80dbToji9pOXKRk/QyGdf9KGXJp6nfgIWjXo5JHZOWHyfC60c6i5l1bAovLr3i10Tlt4L+1EL3wUpC6anY3OFHVdwX1WYBlERFJ2UcmCqVdXxCQlWcnIdrLCNilpk4ahb7G+2agPFXjvVEYSDKLK5SMToR3ZeYhJwr7rMGVj+vbIDUbaiBQ6B29hPblqz4VR54ktV0m+TlI56EqPJF6vuE8be8JJ1Nv52sLjROyyc3pb/As4J4WmXajzXg6T/5JTm4NWHpIpnNgPlGbUmYJAw2yYlxJHqBvMK3tHNzj/K8G1qM4ZEFZeNwS/Dvx//R4ZVSJqR7fzAruSO5yRDFW1hWxLIib3Z7vwe3vi9uc9dni80zG+wo+z5JLWFisbHJEUBMuPpbdNfueZHlmxekx+emgOb1PgqVlugwXByyvvSIW9euAwZVAI1SauNNXuXtLzV57B/jih5i+5g0F140YsvcpL+QoZtT94PTlrezHuSDeuOOglMgPEk+WEn/rRmWI739GNbz/axsHuV6RQYBqn2LPccrnL5Y/xJ78nEA4bEheD/M+QSpJbIFNfCPU0RGOZtUQfLwaRjnkkPWDeKwdAVMxyC/LznNG7DXcTpkglgmC9TMEciK29YFCMWRmILSbNMoYAhrK58TYRH9FP/EzDEJMIl/38ZXJPiQCuaiBAzXPAJRgWzQeIzEUM8rSmXv5gek5OmExEOIWQIsWr+3Qm4RxMrWMgQarjlSlpmP7vjEdvkTMl98b8ugpAh3MwgCKr2MkMWMoTKsj9Sw2LtxHNNWpkZhIghBP6FNSxQDBeXAGKGULoglY5lXcfNNGa23bjfFkLEEKZQqGft9DMQM4Q5lzJR3dTigPub9C6METAcF05hOImxv8UMYVFIlS1kJEtbW+ULGLrpJZgD0AAxe5OKoZeWuldtdSFguM3R6BmkDBUxw4HsKp2e0g+X6S296l4+QygOKKyoXSd/L2YYyO4mVm3ySHzyKVDMYvAZdqT0c2opixmuZI0atviT/qAttExE4DPsFkrSV8893p9JgOiSysb72S9KjSYPfIZMnD0LvU6wU4LXn0KG6wID4g2vnfGXs8V8kuAzZO6ORK3cd0JziRjCgpYrimHfTPkzOdMqBz7Dq5yhtEo8CAFDheuM8zYd25pal5fxGd7aUmYyc1XfZYQ8D3g4UDmcyGY7HQAe58yrFMQMJQqr1wmxBwy/eoM4Pt1z9NZPSePZS1s0DCtNnW/McJllyIWs/5PUQCEWcmsqAz7DrVyLXnaVcnCVLaRljkRWbbJPdS4A5zNc5WyGHLAH8TY2eAwfK4XXk+YfPABLTqOGi8/Qa8vEmfuPxHCAoQv5jTfs0UhJV7P9kaP6NI+Q8hlCILjQXZ0CpdefYqtNDtBGjqfEvEsNL5jPcCAlnlPWKwVDt51vZGuefOIznCRnh4Mg+cApGK54/TIrS92DEviHHzLCdJuUewQMR9y1w1bVU7k9AcN0hCIPsA1jhgoBw6DNPaLEGlc+uyFgOJAYLVjTMVuTgCHLbHHOy69z1UgBRLG2Nv9pRmCh6Y/Y3+YMHYEIB7GmWsAnYnhOTVAWMM3xzW/OUHi7x1FG+KUgYgh7XqT04QB5wvM2Zyh8qoGGShRG9XcFCmORnkJzhm5bFMqZFa6qLIQMhw9hixAsTRrDxgyZ8Rnw/81kjWLpkDi7BmF43kGJvPefmDK00ss+r081u6YgQ4oXtObqIDw1FSQ/NGW4KtIHV2WFUcAwvI0lyP4j/wVxhgyLrxW0klaiBIoYhrdJHFKxl94pl6ApQ9ZZQWT7qDqJhQyjl89++84QhEp/6PjRG5MzXzZj6HC3xBs91UksZtiyXm/uOOw9b394/ZUzFjOGbEsUlq+x0ajEayQYtvp5pWIfuXrSiKEjpe0GiuLUlWD440J0D0l+t8/8mBAw1L36gMlJifq8ZGSIDsPBYn98Xi7P497vlXI02ioUpLHvUb6lqzKwi8akQsZsu2qWLdSKQHp/wX4lfHtHRYCrSSWTS+AR/HVH2ZhN/SG5vyFp+bfV7oP7Ln3ZX9fQ/K0DH2rSgykW7de11YKzohoHvUt5r1XZgDWqVHsYmJgW1WPKLHnFO/q2ym5UnZAv0ngD1unfcnIWqumV82ZgUZfwFvoSAEFLjYtJtV8rWDm+NXcUHMKo4m4WU8CdlFo3F4MEvlG+hL4UgNjXvC4Qfkt7GSI9LKN58LRkVKXA2g39vXRsuiMFqXmTS2TwyEdzBSq+vdVoChzTZ1Qu4PZpw5t9MblA90JSUngkotA13MolAggSXJvqN3UWgeCBQl9DgozqPYx0AFPmQnNvEPjPm4ZRhBl8Uvl3eJc10Qv1aABSVO6NYFLA8+bN0YtwQrR9oox4YrK6KdaNfWKjoXuvNwDzY1TX5puhA+fDt9SXk+GNyE24awk19JzercO7Lp+1634Ue3TvKIjBxjMP9cYYZ3h9RFBO6+NV7ZvR+lPyU8YVcqttpaJI13qZgCzCO9LrURsjPPo0L/eGR1RF7VUN4fCwoCMou58+vm+F4rWoSrBRxHxXYTuGV93vqzTF++HVRrtqUn4zlKm6N2loIKqqqs4yDt87UZFuHIVP1KvyEtkxVhy2b+UHqWbhRVqnql2bXrhw9uVu/XFY2dheVJ9eeJXjzcubx/HiT9hHPXGicag4ePfnGbcfXfT2rM/3tufhGE5d8kU0WYZtX6pWvalxRBw3Z8qFNO5GFy1+1x9Y6IRi9ceU6xIFTjq7cPu1j24j8pf2LuK48XrGI3K+vqPmbs2pdxn6m2hU7XnXwLLqfD1eDXmNCl/+6Mf9a2jtm99RZzkduct3E0e/gcU8dhC/hnX/ZcmLnpkTrE/v317Wjc3nOYt7jGT7Pl/0JuK5mDqWu9x+xH+1LqcKnAx2cGsn8fgh2h1YzihmOI+dTu8zWG+fm9SXz1YjhGcB+r3dqa2Ojz33/uQmwrbOq6c0uc1t2W2Y5JTC2O4tluk1m8b3fOc6tYeZjTCcTbr+13p1eMR4bY5b7+y71mj8j70a5Re/+MX/Ff8BIfWe08zJCNQAAAAASUVORK5CYII=" title="위로 가기"></a></div>
 </body>
 </html>
