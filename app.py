@@ -158,7 +158,7 @@ def web_post_up():
     img_receive = request.form['img_give']
     post_up_list = list(db.post_up.find({}, {'_id': False}))
     count = len(post_up_list) + 1
-
+    content_like = 0
 
     doc = {
         'park': park_receive,
@@ -167,7 +167,7 @@ def web_post_up():
         'content':content_receive,
         'ride': ride_receive,
         'img': img_receive,
-        'like': 0,
+        'like': content_like,
         'num': count
     }
     db.post_up.insert_one(doc)
@@ -179,17 +179,17 @@ def web_post():
     return jsonify({'postUpLists':postUpList})
 
 
-# @app.route('/post/like', methods=['POST'])
-# def post_like():
-#     id_receive = request.form['id_give']
-#     like_star = db.post_up.find_one({'id': id_receive})
-#     current_like = like_star['like']
-#
-#     new_like = current_like + 1
-#
-#     db.post_up.update_one({'idd': i_receive}, {'$set': {'like': new_like}})
-#
-#     return jsonify({'msg': '좋아요 완료!'})
+@app.route('/post/post_like', methods=['POST'])
+def post_like():
+    num_receive = request.form['num_give']
+    like_star = db.post_up.find_one({'num': num_receive})
+    current_like = like_star['like']
+
+    new_like = int(current_like) + 1
+
+    db.post_up.update_one({'num': num_receive}, {'$set': {'like': new_like}})
+
+    return jsonify({'msg': '좋아요 완료!'})
 
 #delete 관련 삭제
 
