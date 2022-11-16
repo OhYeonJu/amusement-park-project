@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9" project-jdk-type="Python SDK" />
+=======
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (miniproject_new)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (1주차 풀스텍 프로젝트)" project-jdk-type="Python SDK" />
+>>>>>>> dev/jyk
+>>>>>>> origin/dev/yeonju
 </project>

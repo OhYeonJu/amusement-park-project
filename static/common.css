@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Jua';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jua/v13/co3KmW9ljjAjdojPCM3T3NGswha8jSmuzy4jzT-N.2.woff2) }
+
+/* 저장된 글꼴 파일 선언*/
+/* @font-face { font-family : font_gothic;  font-weight:300;  
+                src : url(../font/NanumGothic.ttf); }  */
+
+* {margin:0; padding:0;}
+html{font-size:16px;
+  }
+body{ font-size:16px;
+      color:#6f6f6f;
+      font-family: ' Gmarket', 'NotoSans_KR' 'Jua';
+     }
+ul, ol, li{list-style-type:none}
+img, fieldset{border:none;vertical-align: middle;outline:0}
+hr {clear:both;border:none}
+a {outline:0;color:inherit;text-decoration:none}
+table{border-collapse:collapse}
+input, textarea {color:inherit;font-size:inherit;
+       font-family:inherit;
+       vertical-align: middle;}
+button{outline:0}
+p{margin-bottom: 0}
+
+

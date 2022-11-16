@@ -1,0 +1,112 @@
+
+.inner {
+    max-width: 1440px;
+    width: 100%;
+    height: 300px;
+
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    background-color: #ABC1A7;
+    font-family: Jua;
+    color: white;
+}
+
+header .logo {
+    width: 45%;
+    text-align: right;
+    padding-top: 1.2%;
+}
+
+header .nav {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    font-size: 22px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .nav > p {
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
+
+.nav h2 {
+    display: block
+}
+
+.nav .depth {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center
+}
+
+.nav .depth > li {
+    width: 15%;
+    text-align: center;
+}
+
+.nav .depth > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav login_show {
+    display: inline;
+    width: 100%
+}
+
+/*form 양식*/
+
+#inputGroup-sizing-lg > p {margin-bottom: 0}
+
+ .post_from{
+        font-family: Jua;
+ }
+
+ .post_from > .form_title { padding-top: 5%;
+                            padding-left: 18.5% }
+ .post_from > .form_field {
+                                    width: 50%;
+                                    margin: 2% auto;
+                                    padding: 2% 2% 2% 2%;
+                                      background-color: #ABC1A7;
+}
+ .post_from > .form_field > .form_content{
+                                      width: 100%;
+                                      background-color: #ABC1A7;
+ }
+
+ .post_from > .form_field > .form_content > .input-group{
+                                        margin-top: 1%;
+                                        margin-top: 1%;
+ }
+
+ .post_from > .form_field > .form_content > .btn-primary{
+                                                    display: inline-block;
+                                                    width: 20%;
+                                                    position: relative;
+ }
+
+ .post_from > .form_field > .form_content > button:nth-last-child(1){
+                                                        left: 28%;;
+                                                     }
+ .post_from > .form_field > .form_content > button:nth-last-child(2){
+                                                        left:24%;
+                                                     }
+
+ .post_from > .form_field > .form_content > .mb-3{
+     padding-top: 2%;
+ }
+
