@@ -7,7 +7,7 @@
 
 
      function save_content() {
-             let park = $('#park').val()
+            let park = $('#park').val()
             let write_title = $('#write_title').val()
             let name = $('#name').val()
             let ride = $('#ride').val()
@@ -75,19 +75,19 @@
             })
         };
 
-        function postLike(num) {
-            console.log(num)
-            $.ajax({
-                type: 'POST',
-                url: '/post/post_like',
-                data: {'num_give' : num},
-                    success: function (response) {
-                        alert(response['msg']);
-                        window.location.reload()
-                    }
-                });
-            }
-
+        //실패한 좋아요 구현 실패의 흔적들
+              // function postLike(num) {
+                //     console.log(num)
+             //     $.ajax({
+             //         type: 'post',
+             //         url: '/post/post_show',
+             //         data: {num_give : num},
+             //             success: function (response) {
+                //                 alert(response['msg']);
+                //                 window.location.reload()
+                //             }
+                //         });
+                //     }
 
 
 
