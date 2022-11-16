@@ -11,7 +11,7 @@ db = client.amusementPark
 @app.route('/')
 def home():
     return render_template("mainpage_index.html")
-
+# jwt토큰 알아보기
 
 
 @app.route("/bucket", methods=["GET"])
