@@ -57,16 +57,6 @@ def post():
 def post_up():
     return render_template('post_up.html')
 
-# @app.route('/login')
-# def login():
-#     msg = request.args.get("msg")
-#     return render_template('login.html', msg=msg)
-#
-#
-# @app.route('/register')
-# def register():
-#     return render_template('register.html')
-
 
 #################################
 ##  로그인을 위한 API            ##
@@ -147,6 +137,18 @@ def api_valid():
     except jwt.exceptions.DecodeError:
         return jsonify({'result': 'fail', 'msg': '로그인 정보가 존재하지 않습니다.'})
 
+
+@app.route('/api/register/id_check', methods=['GET'])
+def id_check():
+    signup_userid_receive = request.args.get('signup_userid_give')
+    print(signup_userid_receive)
+
+    result = db.user.find_one({'id': signup_userid_receive})
+
+    if (result == None) :
+        return jsonify({'msg': 'ID를 생성할 수 있습니다.', 'status': 'success'})
+    else :
+        return jsonify({'msg': '중복된 ID가 있습니다.', 'status': 'fail'})
 
 @app.route("/post_up", methods=["POST"])
 def web_post_up():

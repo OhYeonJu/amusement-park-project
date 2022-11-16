@@ -60,3 +60,16 @@ body, html {
 .container-fluid .wrap > .btn_box > div > #sign_up_btn {
     margin: 15px 0 0;
 }
+
+/* 회원가입 모달 창*/
+#signUpModalCenter > div > div > div.modal-body > div > div.field-body {
+   flex-grow: 4;
+}
+
+#signUpModalCenter > div > div > div.modal-body > div > div.field-label.is-normal {
+    padding: 0;
+}
+
+#signUpModalCenter > div > div > div.modal-body > div > div.field-label.is-normal > label {
+    line-height: 40px;
+}
