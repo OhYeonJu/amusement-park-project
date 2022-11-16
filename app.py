@@ -20,16 +20,6 @@ import hashlib
 def home():
     return render_template("intro.html")
 
-    # token_receive = request.cookies.get('mytoken')
-    # try:
-    #     payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
-    #     user_info = db.user.find_one({"id": payload['id']})
-    #     return render_template('index.html', nickname=user_info["nick"])
-    # except jwt.ExpiredSignatureError:
-    #     return redirect(url_for("login", msg="로그인 시간이 만료되었습니다."))
-    # except jwt.exceptions.DecodeError:
-    #     return redirect(url_for("login", msg="로그인 정보가 존재하지 않습니다."))
-
 @app.route('/amusementpark')
 def main():
     token_receive = request.cookies.get('mytoken')
@@ -42,15 +32,51 @@ def main():
 
 @app.route('/introduction')
 def introduction():
-   return render_template('introduction.html')
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("introduction.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("introduction.html")
+@app.route('/introduction2')
+def introduction2():
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("introduction2.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("introduction2.html")
+@app.route('/introduction3')
+def introduction3():
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("introduction3.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("introduction3.html")
 
 @app.route('/post')
 def post():
-    return render_template('post.html')
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("post.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("post.html")
 
 @app.route('/post_up')
 def post_up():
-    return render_template('post_up.html')
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("post_up.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("post_up.html")
 
 # [회원가입 API]
 @app.route('/api/register', methods=['POST'])
@@ -65,9 +91,7 @@ def api_register():
 
     return jsonify({'result': 'success'})
 
-
 # [로그인 API]
-# id, pw를 받아서 맞춰보고, 토큰을 만들어 발급합니다.
 @app.route('/api/login', methods=['POST'])
 def api_login():
     id_receive = request.form['id_give']
@@ -88,11 +112,7 @@ def api_login():
     else:
         return jsonify({'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'})
 
-
 # [유저 정보 확인 API]
-# 로그인된 유저만 call 할 수 있는 API입니다.
-# 유효한 토큰을 줘야 올바른 결과를 얻어갈 수 있습니다.
-# (그렇지 않으면 남의 장바구니라든가, 정보를 누구나 볼 수 있겠죠?)
 @app.route('/api/username', methods=['GET'])
 def api_valid():
     token_receive = request.cookies.get('mytoken')
@@ -108,7 +128,6 @@ def api_valid():
         return jsonify({'result': 'fail', 'msg': '로그인 시간이 만료되었습니다.'})
     except jwt.exceptions.DecodeError:
         return jsonify({'result': 'fail', 'msg': '로그인 정보가 존재하지 않습니다.'})
-
 
 @app.route('/api/register/id_check', methods=['GET'])
 def id_check():
@@ -132,7 +151,6 @@ def web_post_up():
     post_up_list = list(db.post_up.find({}, {'_id': False}))
     count = len(post_up_list) + 1
 
-
     doc = {
         'park': park_receive,
         'write_title': write_title_receive,
@@ -150,27 +168,12 @@ def web_post():
     postUpList = list(db.post_up.find({}, {'_id': False}))
     return jsonify({'postUpLists':postUpList})
 
-
-# @app.route('/post/like', methods=['POST'])
-# def post_like():
-#     id_receive = request.form['id_give']
-#     like_star = db.post_up.find_one({'id': id_receive})
-#     current_like = like_star['like']
-#
-#     new_like = current_like + 1
-#
-#     db.post_up.update_one({'idd': i_receive}, {'$set': {'like': new_like}})
-#
-#     return jsonify({'msg': '좋아요 완료!'})
-
 #delete 관련 삭제
-
 @app.route("/post/delete", methods=["post"])
 def web_post_delet():
     num_receive = request.form['num_give']
     db.post_up.delete_one({'num': int(num_receive)})
     return jsonify({'msg': '삭제 완료하였습니다.!'})
-
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

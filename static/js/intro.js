@@ -19,10 +19,10 @@ function login() {
     })
 }
 
-// 간단한 회원가입 함수입니다.
-// 아이디, 비밀번호, 닉네임을 받아 DB에 저장합니다.
+// DB에서 같은 id가 있는지 확인하는 변수
 var id_check = 0;
 
+// 회원가입 함수
 function register() {
     let signup_userpw = $('#signup_userpw').val()
     let signup_userpw_check = $('#signup_userpw_check').val()
