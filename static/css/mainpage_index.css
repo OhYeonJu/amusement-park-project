@@ -1,62 +1,75 @@
-.inner{
+.inner {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
-    width:100%;
+header {
+    width: 100%;
     height: 100px;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     position: relative;
     background-color: #ABC1A7;
     font-family: Jua;
-    color:white;
+    color: white;
 }
 
-header .logo{
+header .logo {
     width: 45%;
     text-align: right;
     padding-top: 1.2%;
 }
 
-header .nav{
-    max-width:1440px;
-    width:100%;
+header .nav {
+    max-width: 1440px;
+    width: 100%;
     display: flex;
     font-size: 22px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
+
 header .nav > p {
-        padding-top: 1%;
-        margin-left: 62%;
-        margin-bottom: 0%;
-              }
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
+header .nav > div {
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
 
-.nav h2{display: block}
+header .nav > div > p {
+    display: inline-block;
+}
 
-.nav .depth{width: 100%;
+.nav h2 {
+    display: block
+}
+
+.nav .depth {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center
 }
 
-.nav .depth > li{
+.nav .depth > li {
     width: 15%;
     text-align: center;
 }
 
-.nav .depth > li > a{
+.nav .depth > li > a {
     text-decoration: none;
     color: white;
 }
 
-.nav login_show{
-    display:inline;
+.nav login_show {
+    display: inline;
     width: 100%
 }
 
@@ -74,10 +87,9 @@ header .nav > p {
     overflow: hidden;
 }
 
-.mainpage_content >img {
+.mainpage_content > img {
     width: 100%;
     height: 500px;
-
 
 
 }
@@ -92,7 +104,7 @@ header .nav > p {
 
 }
 
-.mainpage_recommand >span {
+.mainpage_recommand > span {
     text-align: center;
     width: 100%;
     font-size: 4vw;
@@ -112,12 +124,13 @@ header .nav > p {
     justify-content: space-between;
 }
 
-.recommand__slot>section {
+.recommand__slot > section {
     width: 380px;
     height: 420px;
     border: 3px solid black;
     background-color: chocolate;
 }
+
 /*.recommand__slot>section:hover {*/
 /*    border: 6px solid black;*/
 /*}*/
@@ -127,7 +140,7 @@ header .nav > p {
     /*background-color: aqua;*/
 }
 
-.mainpage_recommand_button >button {
+.mainpage_recommand_button > button {
     width: 300px;
     height: 100px;
     display: inline-block;
@@ -139,7 +152,7 @@ header .nav > p {
     border: 3px solid black;
 }
 
-.mainpage_recommand_button >button:hover {
+.mainpage_recommand_button > button:hover {
     border: 5px solid black;
 }
 
@@ -202,6 +215,7 @@ header .nav > p {
     background-position: center;
     overflow: hidden;
 }
+
 .amusement_name_tooltip {
     background-color: #c9dbc8;
     width: 380px;
@@ -219,38 +233,38 @@ header .nav > p {
 .recommand_slot1:hover .amusement_name_tooltip {
     /*visibility: visible;*/
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2;
 }
 
 .recommand_slot2:hover .amusement_name_tooltip {
     /*visibility: visible;*/
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2;
 }
 
 .recommand_slot3:hover .amusement_name_tooltip {
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2;
 }
 
 .recommand_slot4:hover .amusement_name_tooltip {
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2;
 }
 
 .recommand_slot5:hover .amusement_name_tooltip {
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2
 }
 
 .recommand_slot6:hover .amusement_name_tooltip {
     opacity: 0.7;
-    transition : all 1s;
+    transition: all 1s;
     scale: 1.2;
 }
 
@@ -387,8 +401,6 @@ header .nav > p {
 }
 
 
-
-
 .review_location {
     width: 95%;
     height: 15%;
@@ -396,7 +408,7 @@ header .nav > p {
     /*background-color: #6f6f6f;*/
 }
 
-.review_location >span {
+.review_location > span {
     color: black;
     font-size: 15px;
     line-height: 60px;
@@ -417,7 +429,7 @@ header .nav > p {
     /*background-color: beige;*/
 }
 
-.review_name_title >span {
+.review_name_title > span {
     color: black;
     font-size: 35px;
     line-height: 60px;
@@ -428,7 +440,7 @@ header .nav > p {
     height: 100%;
 }
 
-.review_name_like >span {
+.review_name_like > span {
     color: black;
     font-size: 20px;
     line-height: 60px;
@@ -441,7 +453,7 @@ header .nav > p {
     /*background-color: #dbdbdb;*/
 }
 
-.review_content >span {
+.review_content > span {
     color: black;
     font-size: 25px;
 }
@@ -453,7 +465,7 @@ header .nav > p {
     /*background-color: #ABC1A7;*/
 }
 
-.review_date >span {
+.review_date > span {
     color: black;
     font-size: 20px;
     line-height: 60px;
@@ -464,7 +476,7 @@ header .nav > p {
     /*background-color: #aac0a7;*/
 }
 
-.mainpage_review_button >button {
+.mainpage_review_button > button {
     width: 300px;
     height: 100px;
     display: inline-block;
@@ -476,6 +488,6 @@ header .nav > p {
     border: 3px solid black;
 }
 
-.mainpage_review_button >button:hover {
+.mainpage_review_button > button:hover {
     border: 5px solid black;
 }

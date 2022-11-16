@@ -1,91 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5, user-scalable=yes" />
     <title>너만 타냐?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="../static/css/common.css"/>
-     <link rel="stylesheet" href="../static/css/mainpage_index.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!--  bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <!--  추가 css  -->
+    <link rel="stylesheet" href="../static/css/mainpage_index.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap" rel="stylesheet">
+
+    <script src="../static/js/mainpage_index.js"></script>
 
     <script>
-        function login_id() {
-            $.ajax({
-                type: "get",
-                url: "",
-                data: {},
-                success: function (response){
 
-                }
-            })
+        function logout() {
+            $.removeCookie('mytoken');
+            alert('로그아웃!')
+            location.replace("/")
         }
     </script>
 </head>
 <body>
-    <header>
-        <div class="logo"><h2>너만 타냐?</h2></div>
-        <nav class="nav">
-            <p>님 안녕하세요</p>
-            <ul class="depth">
-                <li><a href="#">놀이기구</a></li>
-                <li><a href="#">놀이기구 후기</a></li>
-                <li><a href="#">나도 탈 수 있을까?</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo"><h2>너만 타냐?</h2></div>
+    <nav class="nav">
+        <div>
+            <p>{{username}}님 안녕하세요</p>
+            <button type="button" id="log_out_btn" class="btn btn-primary" onclick="logout()">Log Out</button>
+        </div>
+        <ul class="depth">
+            <li><a href="#">놀이기구</a></li>
+            <li><a href="#">놀이기구 후기</a></li>
+            <li><a href="#">나도 탈 수 있을까?</a></li>
+        </ul>
+    </nav>
+</header>
 <!--    종열이파트 시작-->
-    <div class="mainpage_content"></div>
-    <section class="inner">
-        <div class="mainpage_recommand">
-            <span>놀이기구 추천</span>
-            <div class="recommand__slot">
-                <section class="recommand_slot1"><div class="amusement_name_tooltip">놀이기구 이름1</div></section>
-                <section class="recommand_slot2"><div class="amusement_name_tooltip">놀이기구 이름2</div></section>
-                <section class="recommand_slot3"><div class="amusement_name_tooltip">놀이기구 이름3</div></section>
-                <section class="recommand_slot4"><div class="amusement_name_tooltip">놀이기구 이름4</div></section>
-                <section class="recommand_slot5"><div class="amusement_name_tooltip">놀이기구 이름5</div></section>
-                <section class="recommand_slot6"><div class="amusement_name_tooltip">놀이기구 이름6</div></section>
-            </div>
-            <div class="mainpage_recommand_button"><button>놀이기구 전체 보기</button></div>
+<div class="mainpage_content"></div>
+<section class="inner">
+    <div class="mainpage_recommand">
+        <span>놀이기구 추천</span>
+        <div class="recommand__slot">
+            <section class="recommand_slot1">
+                <div class="amusement_name_tooltip">놀이기구 이름1</div>
+            </section>
+            <section class="recommand_slot2">
+                <div class="amusement_name_tooltip">놀이기구 이름2</div>
+            </section>
+            <section class="recommand_slot3">
+                <div class="amusement_name_tooltip">놀이기구 이름3</div>
+            </section>
+            <section class="recommand_slot4">
+                <div class="amusement_name_tooltip">놀이기구 이름4</div>
+            </section>
+            <section class="recommand_slot5">
+                <div class="amusement_name_tooltip">놀이기구 이름5</div>
+            </section>
+            <section class="recommand_slot6">
+                <div class="amusement_name_tooltip">놀이기구 이름6</div>
+            </section>
         </div>
-        <div class="mainpage_review">
-            <span>놀이기구 후기</span>
-            <div class="review__slot-1">
-                <section><div class="review_slot1_img"></div>
+        <div class="mainpage_recommand_button">
+            <button>놀이기구 전체 보기</button>
+        </div>
+    </div>
+    <div class="mainpage_review">
+        <span>놀이기구 후기</span>
+        <div class="review__slot-1">
+            <section>
+                <div class="review_slot1_img"></div>
                 <div class="review_slot1_txt">
-                <div class="review_location"><span>에버랜드</span></div>
-                <div class="review_name"><div class="review_name_title"><span>후기제목</span></div><div class="review_name_like"><span>좋아요1</span></div></div>
-                <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span></div>
-                <div class="review_date"><span>작성일자</span></div>
-                </div></section>
-                <section><div class="review_slot2_img"></div>
+                    <div class="review_location"><span>에버랜드</span></div>
+                    <div class="review_name">
+                        <div class="review_name_title"><span>후기제목</span></div>
+                        <div class="review_name_like"><span>좋아요1</span></div>
+                    </div>
+                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
+                    </div>
+                    <div class="review_date"><span>작성일자</span></div>
+                </div>
+            </section>
+            <section>
+                <div class="review_slot2_img"></div>
                 <div class="review_slot2_txt">
-                <div class="review_location"><span>에버랜드</span></div>
-                <div class="review_name"><div class="review_name_title"><span>후기제목</span></div><div class="review_name_like"><span>좋아요1</span></div></div>
-                <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span></div>
-                <div class="review_date"><span>작성일자</span></div>
-                </div></section>
-            </div>
-            <div class="review__slot-2">
-                <section><div class="review_slot3_img"></div>
-                <div class="review_slot3_txt">
-                <div class="review_location"><span>에버랜드</span></div>
-                <div class="review_name"><div class="review_name_title"><span>후기제목</span></div><div class="review_name_like"><span>좋아요1</span></div></div>
-                <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span></div>
-                <div class="review_date"><span>작성일자</span></div>
-                </div></section>
-                <section><div class="review_slot4_img"></div>
-                <div class="review_slot4_txt">
-                <div class="review_location"><span>에버랜드</span></div>
-                <div class="review_name"><div class="review_name_title"><span>후기제목</span></div><div class="review_name_like"><span>좋아요1</span></div></div>
-                <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span></div>
-                <div class="review_date"><span>작성일자</span></div>
-                </div></section>
-            </div>
-            <div class="mainpage_review_button"><button>후기 전체보기</button></div>
+                    <div class="review_location"><span>에버랜드</span></div>
+                    <div class="review_name">
+                        <div class="review_name_title"><span>후기제목</span></div>
+                        <div class="review_name_like"><span>좋아요1</span></div>
+                    </div>
+                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
+                    </div>
+                    <div class="review_date"><span>작성일자</span></div>
+                </div>
+            </section>
         </div>
-    </section>
+        <div class="review__slot-2">
+            <section>
+                <div class="review_slot3_img"></div>
+                <div class="review_slot3_txt">
+                    <div class="review_location"><span>에버랜드</span></div>
+                    <div class="review_name">
+                        <div class="review_name_title"><span>후기제목</span></div>
+                        <div class="review_name_like"><span>좋아요1</span></div>
+                    </div>
+                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
+                    </div>
+                    <div class="review_date"><span>작성일자</span></div>
+                </div>
+            </section>
+            <section>
+                <div class="review_slot4_img"></div>
+                <div class="review_slot4_txt">
+                    <div class="review_location"><span>에버랜드</span></div>
+                    <div class="review_name">
+                        <div class="review_name_title"><span>후기제목</span></div>
+                        <div class="review_name_like"><span>좋아요1</span></div>
+                    </div>
+                    <div class="review_content"><span>후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용 후기내용후기내용 후기내용 후기내용 후기내용 </span>
+                    </div>
+                    <div class="review_date"><span>작성일자</span></div>
+                </div>
+            </section>
+        </div>
+        <div class="mainpage_review_button">
+            <button>후기 전체보기</button>
+        </div>
+    </div>
+</section>
 </body>
 </html>
