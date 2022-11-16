@@ -53,7 +53,7 @@ def introduction():
 def post():
     return render_template('post.html')
 
-@app.route('/post/post_up')
+@app.route('/post_up')
 def post_up():
     return render_template('post_up.html')
 
@@ -148,7 +148,7 @@ def api_valid():
         return jsonify({'result': 'fail', 'msg': '로그인 정보가 존재하지 않습니다.'})
 
 
-@app.route("/post/post_up", methods=["POST"])
+@app.route("/post_up", methods=["POST"])
 def web_post_up():
     park_receive = request.form['park_give']
     write_title_receive = request.form['write_title_give']
@@ -171,7 +171,7 @@ def web_post_up():
     db.post_up.insert_one(doc)
     return jsonify({'msg': '후기 작성 완료!'})
 
-@app.route("/post/post_up", methods=["GET"])
+@app.route("/post", methods=["GET"])
 def web_post():
     postUpList = list(db.post_up.find({}, {'_id': False}))
     return jsonify({'postUpLists':postUpList})
@@ -191,7 +191,7 @@ def web_post():
 
 #delete 관련 삭제
 
-@app.route("/post/post_up/delete", methods=["post"])
+@app.route("/post/delete", methods=["post"])
 def web_post_delet():
     num_receive = request.form['num_give']
     db.post_up.delete_one({'num': int(num_receive)})
