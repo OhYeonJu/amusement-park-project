@@ -12,25 +12,20 @@
             let name = $('#name').val()
             let ride = $('#ride').val()
             let img = $('#img').val()
-            if (park === "selected" && write_title === " " && name === " " && ride === " ") {
-                 alert("빈칸을 채워주세요")
-            }
-            else{
                 $.ajax({
                 type: "POST",
                 url: "/post_up",
                 data: {'park_give':park, 'write_title_give':write_title, 'name_give':name, 'ride_give':ride, 'img_give': img},
                 success: function (response) {
                     alert(response["msg"])
-                    window.location.replace("/")
+                    window.location.replace("/post")
                 }})
-
-        }};
+        };
 
         function content_show() {
             $.ajax({
                 type: 'GET',
-                url: '/post',
+                url: '/post/post_show',
                 data: {},
                 success: function (response) {
                     let rows = response['postUpLists']

@@ -171,7 +171,7 @@ def web_post_up():
     db.post_up.insert_one(doc)
     return jsonify({'msg': '후기 작성 완료!'})
 
-@app.route("/post", methods=["GET"])
+@app.route("/post/post_show", methods=["GET"])
 def web_post():
     postUpList = list(db.post_up.find({}, {'_id': False}))
     return jsonify({'postUpLists':postUpList})
