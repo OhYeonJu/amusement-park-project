@@ -30,6 +30,16 @@ def main():
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return render_template("mainpage_index.html")
 
+@app.route('/bonuspage')
+def bonus():
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("bonuspage.html", username= user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("bonuspage.html")
+
 @app.route('/introduction')
 def introduction():
     token_receive = request.cookies.get('mytoken')
