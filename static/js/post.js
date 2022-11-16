@@ -11,16 +11,20 @@
             let write_title = $('#write_title').val()
             let name = $('#name').val()
             let ride = $('#ride').val()
+            let content = $('#content').val()
             let img = $('#img').val()
+          if (park === "놀이공원을 선택해주세요." || write_title == "" || name == "" || ride == "" || img == "" || content == "") {
+                 alert("빈칸을 채워주세요")
+            }else {
                 $.ajax({
                 type: "POST",
                 url: "/post_up",
-                data: {'park_give':park, 'write_title_give':write_title, 'name_give':name, 'ride_give':ride, 'img_give': img},
+                data: {'park_give':park, 'write_title_give':write_title, 'name_give':name, 'content_give': content, 'ride_give':ride, 'img_give': img},
                 success: function (response) {
                     alert(response["msg"])
                     window.location.replace("/post")
                 }})
-        };
+        }};
 
         function content_show() {
             $.ajax({
@@ -35,6 +39,7 @@
                         let name = rows[i]['name'];
                         let ride = rows[i]['ride'];
                         let num = rows[i]['num'];
+                        let content = rows[i]['content']
                         let img = rows[i]['img'];
 
 
@@ -42,8 +47,9 @@
                                                <div class="img"><img src="${img}" alt="이미지"></div>
                                                 <div class="content">
                                                     <p class="like"><span>놀이공원명: ${park}</span></p><p class="like"><span>좋아요:0</span></p>
+                                                    <p><span>놀이기구:</span> ${ride}</p>
                                                     <p><span>제목:</span> ${write_title}</p>
-                                                    <p><span>내용:</span> ${ride}</p>
+                                                    <p><span>내용:</span> ${content}</p>
                                                     <p><span>작성자:</span> ${name}</p>
                                                   <span class="button"><button type="button" class="btn btn-outline-danger" onclick=" ">좋아요</button>
                                                   <button type="button" class="btn btn-outline-success" onclick="delet(${num})">삭제</button></span>

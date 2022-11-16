@@ -153,6 +153,7 @@ def web_post_up():
     park_receive = request.form['park_give']
     write_title_receive = request.form['write_title_give']
     name_receive = request.form['name_give']
+    content_receive = request.form['content_give']
     ride_receive = request.form['ride_give']
     img_receive = request.form['img_give']
     post_up_list = list(db.post_up.find({}, {'_id': False}))
@@ -163,6 +164,7 @@ def web_post_up():
         'park': park_receive,
         'write_title': write_title_receive,
         'name': name_receive,
+        'content':content_receive,
         'ride': ride_receive,
         'img': img_receive,
         'like': 0,
