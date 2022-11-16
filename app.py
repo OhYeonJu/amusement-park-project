@@ -24,7 +24,6 @@ import datetime
 # 그렇지 않으면, 개발자(=나)가 회원들의 비밀번호를 볼 수 있으니까요.^^;
 import hashlib
 
-
 #################################
 ##  HTML을 주는 부분             ##
 #################################
@@ -56,11 +55,6 @@ def post():
 @app.route('/post_up')
 def post_up():
     return render_template('post_up.html')
-
-
-#################################
-##  로그인을 위한 API            ##
-#################################
 
 # [회원가입 API]
 # id, pw, nickname을 받아서, mongoDB에 저장합니다.

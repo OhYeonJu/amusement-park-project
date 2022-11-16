@@ -61,6 +61,10 @@ body, html {
     margin: 15px 0 0;
 }
 
+.modal {
+    font-family: 'Jua', sans-serif;
+}
+
 /* 회원가입 모달 창*/
 #signUpModalCenter > div > div > div.modal-body > div > div.field-body {
    flex-grow: 4;

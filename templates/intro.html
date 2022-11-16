@@ -56,16 +56,20 @@
         var id_check = 0;
 
         function register() {
+            let signup_userpw = $('#signup_userpw').val()
+            let signup_userpw_check = $('#signup_userpw_check').val()
             if (id_check == 0) {
                 alert('ID CHECK를 해주세요.')
+            } else if(signup_userpw != signup_userpw_check){
+                alert('pw가 다릅니다.')
             } else {
                 $.ajax({
                     type: "POST",
                     url: "/api/register",
                     data: {
                         id_give: $('#signup_username').val(),
-                        pw_give: $('#signup_userid').val(),
-                        name_give: $('#signup_userpw').val()
+                        name_give: $('#signup_userpw').val(),
+                        pw_give: $('#signup_userid').val()
                     },
                     success: function (response) {
                         if (response['result'] == 'success') {
@@ -76,7 +80,7 @@
                         }
                     }
                 })
-                }
+            }
         }
 
 
