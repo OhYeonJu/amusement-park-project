@@ -186,5 +186,10 @@ def web_post_delet():
     db.post_up.delete_one({'num': int(num_receive)})
     return jsonify({'msg': '삭제 완료하였습니다.!'})
 
+@app.route("/mainpagepost", methods=["GET"])
+def mainpage():
+    MP_postlist = list(db.post_up.find({}, {'_id': False}))
+    return jsonify({'MP_postlists': MP_postlist})
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
