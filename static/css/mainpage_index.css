@@ -97,8 +97,6 @@ header .nav > div > p {
 .mainpage_content > img {
     width: 100%;
     height: 500px;
-
-
 }
 
 .mainpage_recommand {
@@ -108,7 +106,6 @@ header .nav > div > p {
     display: flex;
     position: relative;
     flex-direction: column;
-
 }
 
 .mainpage_recommand > span {
