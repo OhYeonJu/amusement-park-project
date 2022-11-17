@@ -30,6 +30,7 @@ def main():
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return render_template("mainpage_index.html")
 
+
 @app.route('/introduction')
 def introduction():
     token_receive = request.cookies.get('mytoken')
