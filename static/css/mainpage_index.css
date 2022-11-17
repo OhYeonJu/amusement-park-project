@@ -81,8 +81,12 @@ header .nav > div > p {
 }
 
 /* 종열이 본문*/
-* {
-    font-family: 'Jua', sans-serif;
+.section1{
+    font-family: Jua;
+}
+
+.section1 > img{
+    width: 100%;
 }
 
 .mainpage_content {

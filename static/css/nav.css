@@ -37,6 +37,19 @@ header .nav > p {
         margin-bottom: 0%;
               }
 
+/*연주 추가*******/
+header .nav > div {
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
+
+header .nav > div > p {
+    display: inline-block;
+}
+
+/*******연주 추가*/
+
 .nav h2{display: block}
 
 .nav .depth{width: 100%;

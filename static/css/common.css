@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 @font-face {
+  font-family: 'Jua';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/jua/v13/co3KmW9ljjAjdojPCM3T3NGswha8jSmuzy4jzT-N.2.woff2) format('woff2')
+}
+
+@font-face {
       font-family:  'Gmarket';
       font-weight: 300;
       src: url(../font/GmarketSansLight.woff);

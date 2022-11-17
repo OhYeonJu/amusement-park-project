@@ -2,8 +2,12 @@ a {
     text-align: -moz-center;
 }
 
-section{
+.section1{
     font-family: Jua;
+}
+
+.section1 > img{
+    width: 100%;
 }
 
 .first_tilte {
@@ -62,7 +66,7 @@ ul {
 }
 
 /* 마우스 가져다 놓으면 색상 변경 */
-li a:hover {
+.navi > li > a:hover {
     background-color: #33f;
     color: white;
 }
@@ -99,7 +103,7 @@ li a:hover {
 
 .bottom {
     width: 1440px;
-    height: 2000px;
+    height:100vh;
     background-color: whitesmoke;
     margin: auto;
 }
