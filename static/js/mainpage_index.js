@@ -22,7 +22,7 @@ function mainpage_show() {
                                         <div class="review_location"><span>장소 : ${park}</span></div>
                                         <div class="review_name">
                                         <div class="review_name_title">제목 : ${write_title}</div>
-                                        <div class="review_name_like"><span>좋아요 1</span></div>
+                                        <div class="review_name_like"><span></span></div>
                                         </div>
                                         <div class="review_content"><span>내용 : ${ride}</span>
                                         </div>
