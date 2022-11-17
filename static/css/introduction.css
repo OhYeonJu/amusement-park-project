@@ -2,7 +2,9 @@ a {
     text-align: -moz-center;
 }
 
-
+section{
+    font-family: Jua;
+}
 
 .first_tilte {
     color: green;

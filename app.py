@@ -30,16 +30,6 @@ def main():
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return render_template("mainpage_index.html")
 
-@app.route('/bonuspage')
-def bonus():
-    token_receive = request.cookies.get('mytoken')
-    try:
-        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
-        user_info = db.user.find_one({"id": payload['id']})
-        return render_template("bonuspage.html", username= user_info["id"])
-    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
-        return render_template("bonuspage.html")
-
 @app.route('/introduction')
 def introduction():
     token_receive = request.cookies.get('mytoken')
@@ -87,6 +77,17 @@ def post_up():
         return render_template("post_up.html", username=user_info["id"])
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return render_template("post_up.html")
+
+@app.route('/bonuspage')
+def bonus():
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template("bonuspage.html", username=user_info["id"])
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        return render_template("bonuspage.html")
+
 
 # [회원가입 API]
 @app.route('/api/register', methods=['POST'])
@@ -151,18 +152,6 @@ def id_check():
     else :
         return jsonify({'msg': '중복된 ID가 있습니다.', 'status': 'fail'})
 
-@app.route('/api/register/id_check', methods=['GET'])
-def id_check():
-    signup_userid_receive = request.args.get('signup_userid_give')
-    print(signup_userid_receive)
-
-    result = db.user.find_one({'id': signup_userid_receive})
-
-    if (result == None) :
-        return jsonify({'msg': 'ID를 생성할 수 있습니다.', 'status': 'success'})
-    else :
-        return jsonify({'msg': '중복된 ID가 있습니다.', 'status': 'fail'})
-
 @app.route("/post_up", methods=["POST"])
 def web_post_up():
     park_receive = request.form['park_give']
@@ -182,7 +171,6 @@ def web_post_up():
         'like': 0,
         'num': count
     }
-
     db.post_up.insert_one(doc)
     return jsonify({'msg': '후기 작성 완료!'})
 
@@ -191,29 +179,12 @@ def web_post():
     postUpList = list(db.post_up.find({}, {'_id': False}))
     return jsonify({'postUpLists':postUpList})
 
-
-# 좋아요 구현 끝끝내 실패하다 그 흔적을 여기에 남깁니다.
-
-# @app.route('/post/post_show', methods=['POST'])
-# def post_like():
-#     ids_receive = request.form['ids_give']
-#     like_star = db.post_up.find_one({'id': ids_receive})
-#     current_like = like_star['like']
-#     new_like = current_like + 1
-#     db.post_up.update_one({'id': ids_receive}, {'$set': {'like': 1}})
-#     return jsonify({'msg': '좋아요 완료!'})
-
 #delete 관련 삭제
 @app.route("/post/delete", methods=["post"])
 def web_post_delet():
     num_receive = request.form['num_give']
     db.post_up.delete_one({'num': int(num_receive)})
     return jsonify({'msg': '삭제 완료하였습니다.!'})
-
-@app.route("/mainpagepost", methods=["GET"])
-def mainpage():
-    MP_postlist = list(db.post_up.find({}, {'_id': False}))
-    return jsonify({'MP_postlists': MP_postlist})
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
