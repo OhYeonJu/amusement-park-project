@@ -48,6 +48,7 @@ header .nav > div {
 header .nav > div > p {
     display: inline-block;
 }
+
 /*******연주 추가*/
 
 .nav h2 {
@@ -71,6 +72,8 @@ header .nav > div > p {
     text-decoration: none;
     color: white;
 }
+header .nav > .depth > li > a:hover{ color:black}
+
 
 .nav login_show {
     display: inline;

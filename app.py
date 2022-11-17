@@ -151,6 +151,18 @@ def id_check():
     else :
         return jsonify({'msg': '중복된 ID가 있습니다.', 'status': 'fail'})
 
+@app.route('/api/register/id_check', methods=['GET'])
+def id_check():
+    signup_userid_receive = request.args.get('signup_userid_give')
+    print(signup_userid_receive)
+
+    result = db.user.find_one({'id': signup_userid_receive})
+
+    if (result == None) :
+        return jsonify({'msg': 'ID를 생성할 수 있습니다.', 'status': 'success'})
+    else :
+        return jsonify({'msg': '중복된 ID가 있습니다.', 'status': 'fail'})
+
 @app.route("/post_up", methods=["POST"])
 def web_post_up():
     park_receive = request.form['park_give']
@@ -170,6 +182,7 @@ def web_post_up():
         'like': 0,
         'num': count
     }
+
     db.post_up.insert_one(doc)
     return jsonify({'msg': '후기 작성 완료!'})
 
@@ -177,6 +190,18 @@ def web_post_up():
 def web_post():
     postUpList = list(db.post_up.find({}, {'_id': False}))
     return jsonify({'postUpLists':postUpList})
+
+
+# 좋아요 구현 끝끝내 실패하다 그 흔적을 여기에 남깁니다.
+
+# @app.route('/post/post_show', methods=['POST'])
+# def post_like():
+#     ids_receive = request.form['ids_give']
+#     like_star = db.post_up.find_one({'id': ids_receive})
+#     current_like = like_star['like']
+#     new_like = current_like + 1
+#     db.post_up.update_one({'id': ids_receive}, {'$set': {'like': 1}})
+#     return jsonify({'msg': '좋아요 완료!'})
 
 #delete 관련 삭제
 @app.route("/post/delete", methods=["post"])
