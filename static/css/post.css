@@ -87,6 +87,10 @@ section {
     padding-bottom: 5%;
 }
 
+.section1 > img{
+    width: 100%;
+}
+
 .review {
     position: relative;
     display: flex;
