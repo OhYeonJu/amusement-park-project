@@ -13,15 +13,24 @@ header {
     margin: 0 auto;
     display: flex;
     position: relative;
-    background-color: #ABC1A7;
+    background-color: lightgoldenrodyellow;
     font-family: Jua;
-    color: white;
+    color: black;
 }
 
 header .logo {
-    width: 45%;
+    width: 30%;
     text-align: right;
     padding-top: 1.2%;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: black;
+}
+
+header .logo a:hover{
+    color: #EDB96B;
 }
 
 header .nav {
@@ -39,17 +48,16 @@ header .nav > p {
     margin-left: 62%;
     margin-bottom: 0%;
 }
-/*연주 추가*******/
+
 header .nav > div {
     padding-top: 1%;
-    margin-left: 62%;
+    margin-left: 54%;
     margin-bottom: 0%;
 }
 
 header .nav > div > p {
     display: inline-block;
 }
-/*******연주 추가*/
 
 .nav h2 {
     display: block
@@ -70,7 +78,11 @@ header .nav > div > p {
 
 .nav .depth > li > a {
     text-decoration: none;
-    color: white;
+    color: black;
+}
+
+.nav > .depth > li > a:hover{
+    color: #EDB96B;
 }
 
 .nav login_show {
@@ -80,44 +92,51 @@ header .nav > div > p {
 
 /*form 양식*/
 
-#inputGroup-sizing-lg > p {margin-bottom: 0}
-
- .post_from{
-        font-family: Jua;
- }
-
- .post_from > .form_title { padding-top: 5%;
-                            padding-left: 18.5% }
- .post_from > .form_field {
-                                    width: 50%;
-                                    margin: 2% auto;
-                                    padding: 2% 2% 2% 2%;
-                                      background-color: #ABC1A7;
+#inputGroup-sizing-lg > p {
+    margin-bottom: 0
 }
- .post_from > .form_field > .form_content{
-                                      width: 100%;
-                                      background-color: #ABC1A7;
- }
 
- .post_from > .form_field > .form_content > .input-group{
-                                        margin-top: 1%;
-                                        margin-top: 1%;
- }
+.post_from {
+    font-family: Jua;
+}
 
- .post_from > .form_field > .form_content > .btn-primary{
-                                                    display: inline-block;
-                                                    width: 20%;
-                                                    position: relative;
- }
+.post_from > .form_title {
+    padding-top: 5%;
+    padding-left: 18.5%
+}
 
- .post_from > .form_field > .form_content > button:nth-last-child(1){
-                                                        left: 28%;;
-                                                     }
- .post_from > .form_field > .form_content > button:nth-last-child(2){
-                                                        left:24%;
-                                                     }
+.post_from > .form_field {
+    width: 50%;
+    margin: 2% auto;
+    padding: 2% 2% 2% 2%;
+    background-color: #ABC1A7;
+}
 
- .post_from > .form_field > .form_content > .mb-3{
-     padding-top: 2%;
- }
+.post_from > .form_field > .form_content {
+    width: 100%;
+    background-color: #ABC1A7;
+}
+
+.post_from > .form_field > .form_content > .input-group {
+    margin-top: 1%;
+    margin-top: 1%;
+}
+
+.post_from > .form_field > .form_content > .btn-primary {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+}
+
+.post_from > .form_field > .form_content > button:nth-last-child(1) {
+    left: 28%;;
+}
+
+.post_from > .form_field > .form_content > button:nth-last-child(2) {
+    left: 24%;
+}
+
+.post_from > .form_field > .form_content > .mb-3 {
+    padding-top: 2%;
+}
 

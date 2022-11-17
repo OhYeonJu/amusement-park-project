@@ -1,12 +1,106 @@
+/* 여기부터 nav에서 가져오고 수정함-/ 연주 */
+.inner {
+    max-width: 1440px;
+    width: 100%;
+    height: 1100px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    background-color: lightgoldenrodyellow;
+    font-family: Jua;
+    color: black;
+}
+
+header .logo {
+    width: 30%;
+    text-align: right;
+    padding-top: 1.2%;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: black;
+}
+
+header .logo a:hover {
+    color: #EDB96B;
+}
+
+header .nav {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    font-size: 22px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .nav > p {
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
+
+header .nav > div {
+    padding-top: 1%;
+    margin-left: 54%;
+    margin-bottom: 0%;
+}
+
+header .nav > div > p {
+    display: inline-block;
+}
+
+.nav h2 {
+    display: block
+}
+
+.nav .depth {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center
+}
+
+.nav .depth > li {
+    width: 15%;
+    text-align: center;
+}
+
+.nav .depth > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav > .depth > li > a:hover {
+    color: #EDB96B;
+}
+
+.nav login_show {
+    display: inline;
+    width: 100%
+}
+
+/* 여기까지 nav에서 가져오고 수정함 - 연주 */
+
 a {
     text-align: -moz-center;
 }
 
-.section1{
+.section1 {
     font-family: Jua;
 }
 
-.section1 > img{
+.section1 > img {
     width: 100%;
 }
 
@@ -57,7 +151,6 @@ div.right {
     padding: 20px;
 }
 
-
 /* 리스트 점 없애기 */
 ul {
     list-style-type: none;
@@ -70,7 +163,6 @@ ul {
     background-color: #33f;
     color: white;
 }
-
 
 /* 우측 갤러리 css */
 #container {
@@ -103,7 +195,7 @@ ul {
 
 .bottom {
     width: 1440px;
-    height:100vh;
+    height: 100vh;
     background-color: whitesmoke;
     margin: auto;
 }

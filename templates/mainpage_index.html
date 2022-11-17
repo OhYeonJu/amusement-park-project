@@ -23,17 +23,20 @@
     <!--  추가 css  -->
     <link rel="stylesheet" href="../static/css/mainpage_index.css">
     <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/nav.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/img/favi.ico">
+
     <script src="../static/js/mainpage_index.js"></script>
 
 </head>
 <body>
 <header>
-    <div class="logo"><h2>너만 타냐?</h2></div>
+    <div class="logo"><h2><a href="/amusementpark">너만 타냐?</a></h2></div>
     <nav class="nav">
         <div>
             <p>{{username}}님 안녕하세요</p>
-            <button type="button" id="log_out_btn" class="btn btn-primary" onclick="logout()">Log Out</button>
+            <button type="button" id="log_out_btn" class="btn btn-dark" onclick="logout()">Log Out</button>
         </div>
         <ul class="depth">
             <li><a href="/introduction">놀이기구</a></li>

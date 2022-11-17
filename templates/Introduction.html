@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../static/css/common.css"/>
     <link rel="stylesheet" href="../static/css/nav.css"/>
     <link rel="stylesheet" href="../static/css/introduction.css"/>
+    <link rel="shortcut icon" href="../static/img/favi.ico">
     <title>너만 타냐?</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,6 +28,10 @@
     <script src="../static/js/introduction.js"></script>
     <style>
         body{font-family: Jua}
+        .logo a{
+            text-decoration: none;
+            color: #fff;
+        }
         .mypost {
             width: 1430px;
             max-width: 1440px;
@@ -111,7 +116,7 @@
 <body>
 
 <header>
-    <div class="logo"><h2>너만 타냐?</h2></div>
+    <div class="logo"><h2><a href="/amusementpark">너만 타냐?</a></h2></div>
     <nav class="nav">
         <div>
             <p>{{ username }}님 안녕하세요</p>
@@ -176,4 +181,3 @@
     </div>
 </div>
 </body>
-<script src="../static/js/introduction.js"></script>
