@@ -105,7 +105,7 @@ a {
 }
 
 .first_tilte {
-    color: green;
+    color: black;
     border: 1px solid white;
     height: 100px;
     margin-top: 30px;
@@ -118,7 +118,7 @@ div.left {
     height: 1000px;
     float: left;
     box-sizing: border-box;
-    background: whitesmoke;
+    background: lightgoldenrodyellow;
     text-align: center;
 }
 
@@ -127,7 +127,7 @@ div.right {
     height: 1000px;
     float: right;
     box-sizing: border-box;
-    background: whitesmoke;
+    background: lightgoldenrodyellow;
 
 }
 
@@ -160,7 +160,7 @@ ul {
 
 /* 마우스 가져다 놓으면 색상 변경 */
 .navi > li > a:hover {
-    background-color: #33f;
+    background-color: #EDB96B;
     color: white;
 }
 
@@ -196,7 +196,7 @@ ul {
 .bottom {
     width: 1440px;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: lightgoldenrodyellow;
     margin: auto;
 }
 

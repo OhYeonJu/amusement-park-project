@@ -121,8 +121,9 @@ section {
     width: 10%;
     position: relative;
     left: 70%;
-    background-color: #ABC1A7;
+    background-color: lightgoldenrodyellow;
     border: none;
+    color: black;
 }
 
 .review > .review_post {
@@ -130,7 +131,7 @@ section {
     display: flex;
     flex-direction: row;
     margin: 1.5% auto;
-    background-color: #ABC1A7;
+    background-color: lightgoldenrodyellow;
 
 }
 

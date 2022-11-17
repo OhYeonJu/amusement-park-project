@@ -109,12 +109,12 @@ header .nav > div > p {
     width: 50%;
     margin: 2% auto;
     padding: 2% 2% 2% 2%;
-    background-color: #ABC1A7;
+    background-color: lightgoldenrodyellow;
 }
 
 .post_from > .form_field > .form_content {
     width: 100%;
-    background-color: #ABC1A7;
+    background-color: lightgoldenrodyellow;
 }
 
 .post_from > .form_field > .form_content > .input-group {
