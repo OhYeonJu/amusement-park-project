@@ -2,6 +2,8 @@ a {
     text-align: -moz-center;
 }
 
+
+
 .first_tilte {
     color: green;
     border: 1px solid white;
@@ -91,4 +93,15 @@ li a:hover {
     width: 200px;
     border: 5px solid black;
     cursor: pointer;
+}
+
+.bottom {
+    width: 1440px;
+    height: 2000px;
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+.mycards {
+    width: 1440px;
 }
