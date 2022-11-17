@@ -33,7 +33,7 @@ function save_comment() {
 
     $.ajax({
         type: "POST",
-        url: "/introduction",
+        url: "/introduction_post",
         data: {'name_give':name, 'comment_give':comment},
         success: function (response) {
             alert(response["msg"])

@@ -30,15 +30,15 @@ def main():
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return render_template("mainpage_index.html")
 
-@app.route('/introduction')
-def introduction():
+@app.route('/introduction1')
+def introduction1():
     token_receive = request.cookies.get('mytoken')
     try:
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
         user_info = db.user.find_one({"id": payload['id']})
-        return render_template("introduction.html", username=user_info["id"])
+        return render_template("introduction1.html", username=user_info["id"])
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
-        return render_template("introduction.html")
+        return render_template("introduction1.html")
 @app.route('/introduction2')
 def introduction2():
     token_receive = request.cookies.get('mytoken')
@@ -118,6 +118,7 @@ def api_login():
             'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 5)
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+        # .decode('utf-8')
 
         return jsonify({'result': 'success', 'token': token})
     else:
@@ -197,7 +198,7 @@ def mainpage():
 
 
 
-@app.route("/introduction", methods=["POST"])
+@app.route("/introduction_post", methods=["POST"])
 def introduction_post():
     name_receive = request.form["name_give"]
     comment_receive = request.form["comment_give"]
@@ -214,17 +215,6 @@ def introduction_post():
 def introduction_get():
     comment_list = list(db.introduction.find({},{'_id':False}))
     return jsonify({'comments':comment_list})
-
-
-
-
-
-
-
-
-
-
-
 
 
 
