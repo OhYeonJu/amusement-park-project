@@ -1,42 +1,44 @@
 
-
-.inner{
+.inner {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
-    width:100%;
+header {
+    width: 100%;
     height: 100px;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     position: relative;
     background-color: #ABC1A7;
     font-family: Jua;
-    color:white; }
+    color: white;
+}
 
-header .logo{
+header .logo {
     width: 45%;
     text-align: right;
     padding-top: 1.2%;
 }
 
-header .nav{
-    max-width:1440px;
-    width:100%;
+header .nav {
+    max-width: 1440px;
+    width: 100%;
     display: flex;
     font-size: 22px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
-header .nav > p {
-        padding-top: 1%;
-        margin-left: 62%;
-        margin-bottom: 0%;
-              }
 
+header .nav > p {
+    padding-top: 1%;
+    margin-left: 62%;
+    margin-bottom: 0%;
+}
+
+/*연주 추가*******/
 header .nav > div {
     padding-top: 1%;
     margin-left: 62%;
@@ -47,101 +49,116 @@ header .nav > div > p {
     display: inline-block;
 }
 
+/*******연주 추가*/
 
+.nav h2 {
+    display: block
+}
 
-.nav h2{display: block}
-
-.nav .depth{width: 100%;
+.nav .depth {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center
 }
 
-.nav .depth > li{
+.nav .depth > li {
     width: 15%;
     text-align: center;
 }
 
-.nav .depth > li > a{
+.nav .depth > li > a {
     text-decoration: none;
     color: white;
 }
+header .nav > .depth > li > a:hover{ color:black}
 
-.nav login_show{
-    display:inline;
+
+.nav login_show {
+    display: inline;
     width: 100%
 }
 
-/* nav hover 시에  */
-
-.nav > .depth > li > a:hover{ color:black}
-
-
 /*놀이공원 후기 */
 
-section{
+section {
     font-family: jua;
     padding-bottom: 5%;
 }
 
- .review {
-     position: relative;
-     display: flex;
-     flex-direction: column;
+.review {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
- }
-
- .review .review_title{
-      padding-top: 5%;
-      padding-left: 18.5%
- }
-
-  .review > button {
-      display: block;
-      position: relative;
-        }
-
-  .review > .btn-primary {
-      width: 10%;
-      position: relative;
-      left: 70%;
-      background-color: #ABC1A7;
-      border: none;
-  }
-
- .review > .review_post {   width: 55%;
-                            display: flex;
-                            flex-direction: row;
-                            margin: 1.5% auto;
-                            background-color: #ABC1A7;
-
- }
-
-  .review > .review_post > .img{width: 40%}
-  .review > .review_post > .img > img {width: 100%;
-                                       height: 100%;
-  }
-
-  .review > .review_post > .content{
-                            width: 100%;
-                            padding: 8.5% 5% 5% 5%;
-
-    }
-
-  .review > .review_post > .content > p{ margin-bottom: 0.5em}
-
-   .review > .review_post > .content > .like {display: inline-block;}
-
-   .review > .review_post > .content > .like:nth-child(2) {margin-left: 34%;}
-
-    .review > .review_post > .content > .button > .btn-outline-danger{
-                                                                    margin-left: 70%;
-    }
-    .review > .review_post > .content > .button > a{
-                                                                    margin-left: 70%;
-    }
-    .review > .review_post > .content > .button > .btn-outline-success{
-                                                        margin-left: 1.5%;
 }
-    .review > .review_post > .content > p > span{font-size: 1.2em}
+
+.review .review_title {
+    padding-top: 5%;
+    padding-left: 18.5%
+}
+
+.review > button {
+    display: block;
+    position: relative;
+}
+
+.review > .btn-primary {
+    width: 10%;
+    position: relative;
+    left: 70%;
+    background-color: #ABC1A7;
+    border: none;
+}
+
+.review > .review_post {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5% auto;
+    background-color: #ABC1A7;
+
+}
+
+.review > .review_post > .img {
+    width: 40%
+}
+
+.review > .review_post > .img > img {
+    width: 100%;
+    height: 100%;
+    -moz-border-radius-bottomleft: 10%;
+    -moz-border-radius-topleft: 10%
+}
+
+.review > .review_post > .content {
+    width: 100%;
+    padding-left: 2.5%;
+    padding-top: 1.5%;
+
+}
+
+.review > .review_post > .content > p {
+    margin-bottom: 0.5em
+}
+
+.review > .review_post > .content > .like {
+    display: inline-block;
+}
+
+.review > .review_post > .content > .like:nth-child(1) {
+    margin-left: 34%;
+}
+
+.review > .review_post > .content > .button > .btn-outline-danger {
+    margin-left: 70%;
+}
+
+.review > .review_post > .content > .button > .btn-outline-success {
+    margin-left: 1.5%;
+}
+
+.review > .review_post > .content > p > span {
+    font-size: 1.2em
+}
